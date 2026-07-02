@@ -97,4 +97,103 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
+
+    // --- 1. COPY EMAIL FUNCTIONALITY ---
+const emailCard = document.querySelector('a[href^="mailto:"]');
+if (emailCard) {
+    emailCard.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevents the default mail app from opening
+        
+        const email = this.getAttribute('href').replace('mailto:', '');
+        
+        // Attempt to copy to clipboard
+        navigator.clipboard.writeText(email).then(() => {
+            const textSpan = this.querySelector('span');
+            const originalText = textSpan.textContent;
+            const svgIcon = this.querySelector('svg'); // Lucide replaces <i> with <svg>
+            
+            // Visual feedback: Change text and highlight icon
+            textSpan.textContent = 'Copied!';
+            if (svgIcon) {
+                svgIcon.style.color = 'var(--accent)'; 
+            }
+            
+            // Revert back to original state after 2 seconds
+            setTimeout(() => {
+                textSpan.textContent = originalText;
+                if (svgIcon) {
+                    svgIcon.style.color = ''; 
+                }
+            }, 2000);
+            
+        }).catch(err => {
+            // Fallback for older browsers or non-HTTPS environments
+            const textArea = document.createElement('textarea');
+            textArea.value = email;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            const textSpan = this.querySelector('span');
+            textSpan.textContent = 'Copied!';
+            setTimeout(() => { textSpan.textContent = 'Copy Email'; }, 2000);
+        });
+    });
+}
+
+// --- 2. NAVBAR SCROLL EFFECT ---
+// Adds the 'scrolled' class to the navbar when you scroll down (matches your CSS)
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// --- 3. MOBILE MENU TOGGLE ---
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+if (mobileMenuBtn && mobileMenuOverlay) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuOverlay.classList.toggle('open');
+        // Prevent background scrolling when menu is open
+        document.body.style.overflow = mobileMenuOverlay.classList.contains('open') ? 'hidden' : '';
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    });
+}
+
+// --- 4. SCROLL ANIMATIONS (Intersection Observer) ---
+// Triggers the 'visible' class when elements scroll into view (matches your CSS .fade-up)
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observe elements with the fade-up class (if you add them to your HTML later)
+document.querySelectorAll('.fade-up').forEach(el => {
+    observer.observe(el);
+});
+    
 });
