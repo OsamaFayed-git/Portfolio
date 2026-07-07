@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Osama Fayed | Game Developer</title>
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-content">
             <a href="#" class="logo">Osama Fayed</a>
-            
+
             <div class="nav-links">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
@@ -52,7 +56,7 @@
             <h1 class="hero-title">Osama Fayed</h1>
             <h2 class="hero-subtitle">Game Developer </h2>
             <p class="hero-tagline">Building gameplay systems, one prototype at a time.</p>
-            
+
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
                 <a href="#contact" class="btn btn-outline">Get in Touch</a>
@@ -68,7 +72,8 @@
         <div class="section-container">
             <h2 class="section-title">About Me</h2>
             <p class="section-description">
-                I'm a Unity Game Developer specializing in gameplay systems, clean architecture, and rapid prototyping. My focus is on creating modular, robust systems that can easily integrate into different game genres.
+                I'm a Unity Game Developer specializing in gameplay systems, clean architecture, and rapid prototyping.
+                My focus is on creating modular, robust systems that can easily integrate into different game genres.
             </p>
 
             <div class="philosophy-grid">
@@ -101,7 +106,7 @@
     <section id="skills" class="section bg-alt">
         <div class="section-container">
             <h2 class="section-title">Technical Skills</h2>
-            
+
             <div class="skills-grid">
                 <div class="skill-category">
                     <div class="category-header">
@@ -153,22 +158,26 @@
     <section id="projects" class="section">
         <div class="section-container">
             <h2 class="section-title">Featured Projects</h2>
-            
+
             <div class="projects-list">
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-media">
-                        <!-- Placeholder image/video area -->
-                        <div class="media-placeholder">
-                            <i data-lucide="image" size="48"></i>
-                            <span>Flying Wizard Prototype Video/Image</span>
+                    <div class="project-media has-gallery"
+                        data-gallery='[{"type":"youtube","src":"https://youtu.be/iPs9ssaKbpM","alt":"Flying Wizard - Demo Video"},{"type":"image","src":"https://placehold.co/800x450/0d0d14/00e5ff?text=Flying+Wizard+Screenshot+1","alt":"Flying Wizard Screenshot 1"},{"type":"image","src":"https://placehold.co/800x450/0d0d14/00e5ff?text=Flying+Wizard+Screenshot+2","alt":"Flying Wizard Screenshot 2"}]'>
+                        <img src="https://placehold.co/800x450/0d0d14/00e5ff?text=Flying+Wizard+Prototype"
+                            alt="Flying Wizard Prototype" class="project-img">
+                        <div class="media-overlay">
+                            <i data-lucide="expand"></i>
+                            <span>View Gallery</span>
                         </div>
                     </div>
                     <div class="project-info">
                         <span class="genre-tag">Action / Ability System</span>
                         <h3 class="project-title">Flying Wizard Prototype</h3>
-                        <p class="project-desc">A flying wizard prototype featuring a full gameplay ability system. Cast fireballs, raise stone walls, and combo abilities mid-flight. Built to demonstrate scalable ability architecture.</p>
-                        
+                        <p class="project-desc">A flying wizard prototype featuring a full gameplay ability system. Cast
+                            fireballs, raise stone walls, and combo abilities mid-flight. Built to demonstrate scalable
+                            ability architecture.</p>
+
                         <div class="tech-stack">
                             <span class="tech-chip">Gameplay Ability System</span>
                             <span class="tech-chip">ScriptableObject Abilities</span>
@@ -176,7 +185,7 @@
                             <span class="tech-chip">Projectile Physics</span>
                             <span class="tech-chip">Component Architecture</span>
                         </div>
-                        
+
                         <div class="project-links">
                             <a href="https://github.com/OsamaFayed-git" target="_blank" class="btn btn-outline btn-sm">
                                 <i data-lucide="github"></i> Source Code
@@ -187,17 +196,22 @@
 
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-media">
-                        <div class="media-placeholder">
-                            <i data-lucide="image" size="48"></i>
-                            <span>Bullet Hell Prototype Video/Image</span>
+                    <div class="project-media has-gallery"
+                        data-gallery='[{"type":"youtube","src":"https://youtu.be/iPs9ssaKbpM","alt":"Bullet Hell - Demo Video"},{"type":"image","src":"https://placehold.co/800x450/0d0d14/00e5ff?text=Bullet+Hell+Screenshot+1","alt":"Bullet Hell Screenshot 1"},{"type":"image","src":"https://placehold.co/800x450/0d0d14/00e5ff?text=Bullet+Hell+Screenshot+2","alt":"Bullet Hell Screenshot 2"}]'>
+                        <img src="https://placehold.co/800x450/0d0d14/00e5ff?text=Bullet+Hell+Roguelike"
+                            alt="Bullet Hell Roguelike" class="project-img">
+                        <div class="media-overlay">
+                            <i data-lucide="expand"></i>
+                            <span>View Gallery</span>
                         </div>
                     </div>
                     <div class="project-info">
                         <span class="genre-tag">Bullet Hell / Roguelike</span>
                         <h3 class="project-title">Bullet Hell Roguelike</h3>
-                        <p class="project-desc">A bullet-hell prototype with a modular ability system. Enemies spawn intricate patterns while the player collects and combines abilities. Focus on object pooling and event-driven spawning.</p>
-                        
+                        <p class="project-desc">A bullet-hell prototype with a modular ability system. Enemies spawn
+                            intricate patterns while the player collects and combines abilities. Focus on object pooling
+                            and event-driven spawning.</p>
+
                         <div class="tech-stack">
                             <span class="tech-chip">Object Pool Pattern</span>
                             <span class="tech-chip">Event-Driven Spawning</span>
@@ -205,7 +219,7 @@
                             <span class="tech-chip">Observer Pattern</span>
                             <span class="tech-chip">Performance Optimization</span>
                         </div>
-                        
+
                         <div class="project-links">
                             <a href="https://github.com/OsamaFayed-git" target="_blank" class="btn btn-outline btn-sm">
                                 <i data-lucide="github"></i> Source Code
@@ -216,17 +230,21 @@
 
                 <!-- Project 3 -->
                 <div class="project-card">
-                    <div class="project-media">
-                        <div class="media-placeholder">
-                            <i data-lucide="image" size="48"></i>
-                            <span>Tower Defense Video/Image</span>
+                    <div class="project-media has-gallery"
+                        data-gallery='[{"type":"youtube","src":"https://youtu.be/iPs9ssaKbpM","alt":"Tower Defense - Demo Video"},{"type":"image","src":"https://placehold.co/800x450/0d0d14/00e5ff?text=Tower+Defense+Screenshot+1","alt":"Tower Defense Screenshot 1"},{"type":"image","src":"https://placehold.co/800x450/0d0d14/00e5ff?text=Tower+Defense+Screenshot+2","alt":"Tower Defense Screenshot 2"}]'>
+                        <img src="https://placehold.co/800x450/0d0d14/00e5ff?text=Grid-Based+Tower+Defense"
+                            alt="Grid-Based Tower Defense" class="project-img">
+                        <div class="media-overlay">
+                            <i data-lucide="expand"></i>
+                            <span>View Gallery</span>
                         </div>
                     </div>
                     <div class="project-info">
                         <span class="genre-tag">Strategy / Grid-Based</span>
                         <h3 class="project-title">Grid-Based Tower Defense</h3>
-                        <p class="project-desc">A grid-based tower defense with modular tower types, pathfinding, and wave management. Clean separation of grid logic, tower behavior, and enemy AI.</p>
-                        
+                        <p class="project-desc">A grid-based tower defense with modular tower types, pathfinding, and
+                            wave management. Clean separation of grid logic, tower behavior, and enemy AI.</p>
+
                         <div class="tech-stack">
                             <span class="tech-chip">Grid System</span>
                             <span class="tech-chip">A* Pathfinding</span>
@@ -234,7 +252,7 @@
                             <span class="tech-chip">Interface-Driven Design</span>
                             <span class="tech-chip">Wave Management</span>
                         </div>
-                        
+
                         <div class="project-links">
                             <a href="https://github.com/OsamaFayed-git" target="_blank" class="btn btn-outline btn-sm">
                                 <i data-lucide="github"></i> Source Code
@@ -245,17 +263,21 @@
 
                 <!-- Project 4 -->
                 <div class="project-card">
-                    <div class="project-media">
-                        <div class="media-placeholder">
-                            <i data-lucide="image" size="48"></i>
-                            <span>VR Shooting Range Video/Image</span>
+                    <div class="project-media has-gallery"
+                        data-gallery='[{"type":"youtube","src":"https://youtu.be/iPs9ssaKbpM","alt":"VR Shooting Range - Demo Video"},{"type":"image","src":"https://placehold.co/800x450/0d0d14/00e5ff?text=VR+Shooting+Range+Screenshot+1","alt":"VR Shooting Range Screenshot 1"},{"type":"image","src":"https://placehold.co/800x450/0d0d14/00e5ff?text=VR+Shooting+Range+Screenshot+2","alt":"VR Shooting Range Screenshot 2"}]'>
+                        <img src="https://placehold.co/800x450/0d0d14/00e5ff?text=VR+Shooting+Range"
+                            alt="VR Shooting Range" class="project-img">
+                        <div class="media-overlay">
+                            <i data-lucide="expand"></i>
+                            <span>View Gallery</span>
                         </div>
                     </div>
                     <div class="project-info">
                         <span class="genre-tag">VR / Simulation</span>
                         <h3 class="project-title">VR Shooting Range</h3>
-                        <p class="project-desc">A VR shooting range built with the XR Interaction Toolkit. Features realistic weapon handling, physics-based interactions, and haptic feedback.</p>
-                        
+                        <p class="project-desc">A VR shooting range built with the XR Interaction Toolkit. Features
+                            realistic weapon handling, physics-based interactions, and haptic feedback.</p>
+
                         <div class="tech-stack">
                             <span class="tech-chip">XR Interaction Toolkit</span>
                             <span class="tech-chip">Haptic Feedback</span>
@@ -263,7 +285,7 @@
                             <span class="tech-chip">Hand Tracking</span>
                             <span class="tech-chip">VR UX Design</span>
                         </div>
-                        
+
                         <div class="project-links">
                             <a href="https://github.com/OsamaFayed-git" target="_blank" class="btn btn-outline btn-sm">
                                 <i data-lucide="github"></i> Source Code
@@ -274,17 +296,21 @@
 
                 <!-- Project 5 -->
                 <div class="project-card">
-                    <div class="project-media">
-                        <div class="media-placeholder">
-                            <i data-lucide="image" size="48"></i>
-                            <span>Level Design Game Video/Image</span>
+                    <div class="project-media has-gallery"
+                        data-gallery='[{"type":"youtube","src":"https://youtu.be/iPs9ssaKbpM","alt":"Last Hope - Youtube Gameplay Demo"},{"type":"image","src":"images/LastHope.png","alt":"Last Hope - Souls-like Level Prototype"}]'>
+                        <img src="images/LastHope.png" alt="Last Hope - Souls-like Level Prototype" class="project-img">
+                        <div class="media-overlay">
+                            <i data-lucide="expand"></i>
+                            <span>View Gallery</span>
                         </div>
                     </div>
                     <div class="project-info">
                         <span class="genre-tag">Souls-like / Level Design</span>
                         <h3 class="project-title">Souls-like Level Prototype</h3>
-                        <p class="project-desc">A Souls-like level design prototype focusing on environmental storytelling, shortcut loops, and risk-reward exploration. Demonstrates spatial design principles and atmospheric world building.</p>
-                        
+                        <p class="project-desc">A Souls-like level design prototype focusing on environmental
+                            storytelling, shortcut loops, and risk-reward exploration. Demonstrates spatial design
+                            principles and atmospheric world building.</p>
+
                         <div class="tech-stack">
                             <span class="tech-chip">Level Design</span>
                             <span class="tech-chip">Shader Programming</span>
@@ -292,7 +318,7 @@
                             <span class="tech-chip">Shortcut Loops</span>
                             <span class="tech-chip">Environmental Storytelling</span>
                         </div>
-                        
+
                         <div class="project-links">
                             <a href="https://github.com/OsamaFayed-git" target="_blank" class="btn btn-outline btn-sm">
                                 <i data-lucide="github"></i> Source Code
@@ -310,7 +336,8 @@
         <div class="section-container">
             <h2 class="section-title">Let's Connect</h2>
             <p class="section-description">
-                Always open to collaboration, game jams, and new opportunities. Drop a message or check out my repositories!
+                Always open to collaboration, game jams, and new opportunities. Drop a message or check out my
+                repositories!
             </p>
 
             <div class="social-links-grid">
@@ -330,10 +357,31 @@
                     <i data-lucide="mail"></i>
                     <span id="email-text">osamaaymanfayed@gmail.com</span>
                 </a>
-                    
+
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-backdrop"></div>
+        <button class="lightbox-close" aria-label="Close gallery">
+            <i data-lucide="x"></i>
+        </button>
+        <div class="lightbox-content">
+            <button class="lightbox-nav lightbox-prev" aria-label="Previous">
+                <i data-lucide="chevron-left"></i>
+            </button>
+            <div class="lightbox-stage"></div>
+            <button class="lightbox-nav lightbox-next" aria-label="Next">
+                <i data-lucide="chevron-right"></i>
+            </button>
+        </div>
+        <div class="lightbox-footer">
+            <span class="lightbox-counter"></span>
+            <div class="lightbox-dots"></div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -354,4 +402,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>
